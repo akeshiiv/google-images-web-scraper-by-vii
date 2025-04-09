@@ -8,7 +8,7 @@ import time, os, requests
 query = "your search query"
 folder_name = "folder name. example: images"
 
-def find_urls(query="cats", print_urls=False):
+def find_urls(query, print_urls=False):
     # query -- your search query, e.g. "birds", "dog"
     # print urls -- 'True' will print out every image url found.
     url = f"https://www.google.com/search?q={query}&tbm=isch"
@@ -40,7 +40,7 @@ def find_urls(query="cats", print_urls=False):
     print(f"Found {len(image_urls)} images")
     return image_urls
 
-def download_img(folder_name):
+def download_img(query, folder_name):
     # navigate into curr directory (see your terminal) -> create new directory within
     try:
         path = os.path.join(os.getcwd(), folder_name)
