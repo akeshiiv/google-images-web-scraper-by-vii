@@ -58,4 +58,4 @@ def download_img(query, folder_name):
             f.write(img.content)
     return f"Images successfully downloaded."
 
-download_img(folder_name)
+download_img(query, folder_name)
