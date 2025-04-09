@@ -50,7 +50,7 @@ def download_img(folder_name):
 
     # cd into folder_name folder, basically, & download all images
     os.chdir(path)
-    urls = find_urls("birds in singapore")
+    urls = find_urls(query)
     for i, url in enumerate(urls):
         fname = f"image_{i}"
         with open(f"{fname}.png", "wb") as f:
@@ -58,5 +58,4 @@ def download_img(folder_name):
             f.write(img.content)
     return f"Images successfully downloaded."
 
-find_urls(query)
 download_img(folder_name)
